@@ -30,7 +30,7 @@ func launchCommandInExtension(args: [String]?) -> Int32 {
 
     // We use a private API here to launch an extension programatically
     let BLE: AnyClass = (NSClassFromString("TlNFeHRlbnNpb24=".base64Decoded()!)!)
-    let ext = Dynamic(BLE).extensionWithIdentifier("thebaselab.VS-Code.extension", error: nil)
+    let ext = Dynamic(BLE).extensionWithIdentifier("com.jermolene.codeapp.extension", error: nil)
 
     ext.setRequestCancellationBlock(
         { uuid, error in

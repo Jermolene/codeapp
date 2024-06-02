@@ -8,7 +8,7 @@
 import UIKit
 import MobileCoreServices
 
-let sharedURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.thebaselab.code")!
+let sharedURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.jermolene.codeapp")!
 
 class OutputListener {
     /// consumes the messages on STDOUT
@@ -86,7 +86,7 @@ class OutputListener {
                 ) in
 
                 let sharedURL = FileManager.default.containerURL(
-                    forSecurityApplicationGroupIdentifier: "group.com.thebaselab.code")!
+                    forSecurityApplicationGroupIdentifier: "group.com.jermolene.codeapp")!
                 let stdoutURL = sharedURL.appendingPathComponent("stdin")
 
                 guard let data = try? Data(contentsOf: stdoutURL),

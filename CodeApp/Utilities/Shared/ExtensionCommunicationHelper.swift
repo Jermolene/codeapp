@@ -9,7 +9,7 @@ import Foundation
 
 class ExtensionCommunicationHelper {
     static let containerURL = FileManager.default.containerURL(
-        forSecurityApplicationGroupIdentifier: "group.com.thebaselab.code")
+        forSecurityApplicationGroupIdentifier: "group.com.jermolene.codeapp")
 
     static func writeToStdin(data: String) {
         let coordinator = NSFileCoordinator(filePresenter: nil)
@@ -17,7 +17,7 @@ class ExtensionCommunicationHelper {
 
         var error: NSError?
         let sharedURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.thebaselab.code")!
+            forSecurityApplicationGroupIdentifier: "group.com.jermolene.codeapp")!
         coordinator.coordinate(
             writingItemAt: sharedURL.appendingPathComponent("stdin"), options: .forReplacing,
             error: &error,
@@ -38,7 +38,7 @@ class ExtensionCommunicationHelper {
 
         var error: NSError?
         let sharedURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.thebaselab.code")!
+            forSecurityApplicationGroupIdentifier: "group.com.jermolene.codeapp")!
         coordinator.coordinate(
             writingItemAt: sharedURL.appendingPathComponent("stdout"), options: .forReplacing,
             error: &error,
